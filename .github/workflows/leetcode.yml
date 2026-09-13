@@ -1,9 +1,9 @@
 name: Sync LeetCode solutions
 
 on:
-  workflow_dispatch: # Позволяет запускать синхронизацию вручную кнопкой
+  workflow_dispatch: 
   schedule:
-    - cron: '0 8 * * *' # Автоматический запуск каждый день в 08:00 UTC
+    - cron: '0 8 * * *' 
 
 jobs:
   build:
@@ -19,4 +19,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
-          destination-folder: '.' # Сохранять папки прямо в корень репозитория
+          destination-folder: '.' 
